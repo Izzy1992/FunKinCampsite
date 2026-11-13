@@ -30,9 +30,9 @@ section{padding:76px 0}.section-head{text-align:center;max-width:700px;margin:0 
 .map-ui-container{background:#f7fbfc;color:var(--ink);border-radius:22px;overflow:hidden;box-shadow:0 16px 40px rgba(0,0,0,0.18);display:grid;grid-template-columns:1.1fr .9fr}
 .map-ui-info{padding:32px;display:flex;flex-direction:column;justify-content:space-between}
 .map-ui-info h3{color:var(--ocean);margin-top:0;font-size:1.5rem}
-.map-ui-info p{color:var(--muted);margin-bottom:16px}
-.landmarks-list{background:#eaf6f8;border-left:4px solid var(--ocean);padding:14px 18px;border-radius:0 12px 12px 0;margin:16px 0;font-size:.92rem}
-.landmarks-list strong{display:block;color:var(--ocean);margin-bottom:4px}
+.map-ui-info p{color:var(--muted);margin-bottom:12px}
+.landmarks-list{background:#eaf6f8;border-left:4px solid var(--ocean);padding:14px 18px;border-radius:0 12px 12px 0;margin:14px 0;font-size:.9rem;line-height:1.6}
+.landmarks-list strong{display:block;color:var(--ocean);margin-bottom:6px}
 .map-ui-visual{background:linear-gradient(135deg,#e1f3f8 0%,#c5e5ed 100%);min-height:280px;position:relative;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;border-left:1px solid #d5e8ed}
 .map-pin-box{background:white;padding:20px 24px;border-radius:16px;box-shadow:0 10px 30px rgba(11,79,108,0.15);max-width:280px;border:1px solid #cde4ea}
 .map-pin-box .pin-icon{font-size:2.2rem;margin-bottom:6px}
@@ -41,6 +41,10 @@ section{padding:76px 0}.section-head{text-align:center;max-width:700px;margin:0 
 
 .contact{text-align:center;background:var(--cream)}.contact .eyebrow{color:#14748b}.contact h2{font-size:clamp(2rem,4vw,3rem);color:var(--ocean);margin:0 0 10px}.contact p{color:var(--muted)}
 .hours-note{display:inline-block;background:#eaf6f8;border:1px solid #cde4ea;padding:10px 20px;border-radius:999px;color:var(--ocean);font-weight:700;font-size:.9rem;margin-top:16px}
+.contact-buttons-group{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:24px}
+.btn-wa-contact{background:#167447;color:white}
+.btn-wa-contact:hover{background:#115c38}
+
 footer{background:#062c3d;color:#cde4ea;padding:36px 0;text-align:center;font-size:.9rem}
 .social-links{display:flex;justify-content:center;gap:16px;margin-bottom:16px}
 .social-btn{background:rgba(255,255,255,0.08);color:#cde4ea;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;text-decoration:none;border:1px solid rgba(255,255,255,0.15);font-size:.9rem;cursor:not-allowed;opacity:0.7}
@@ -107,23 +111,25 @@ footer{background:#062c3d;color:#cde4ea;padding:36px 0;text-align:center;font-si
 <div class="wrap">
 <div class="section-head">
 <div class="eyebrow">Find us</div>
-<h2>Peta & Panduan Lokasi</h2>
-<p>Panduan laluan mudah dan mercu tanda berhampiran untuk ke Fun Kin Campsite.</p>
+<h2>Lokasi & Panduan Arah</h2>
+<p>Terletak di pesisir Pantai Rhu, Punggai dengan akses mudah dari mercu tanda utama.</p>
 </div>
 <div class="map-ui-container">
 <div class="map-ui-info">
 <div>
 <h3>Fun Kin Campsite</h3>
-<p><strong>Alamat:</strong> Pantai Rhu, Punggai, Tanjung Sepang, Pengerang, Johor, Malaysia.</p>
+<p>📍 <strong>Alamat:</strong> Pantai Rhu, Punggai, Tanjung Sepang, Pengerang, Johor.</p>
 <div class="landmarks-list">
-<strong>📍 Mercu Tanda & Laluan Berhampiran:</strong>
-• Dari Lebuhraya Senai-Desaru / Bandar Penawar, susur ke laluan utama Punggai / Tanjung Sepang.<br>
-• Berdekatan kawasan perkampungan pesisir pantai Pantai Rhu.<br>
-• Mudah diakses oleh kenderaan biasa (Sedan & SUV) hingga ke tapak.
+<strong>🧭 Panduan Lokasi & Titik Tumpuan:</strong>
+• Berdekatan kawasan <strong>Tanjung Sepang</strong> & pesisir <strong>Pantai Rhu</strong>.<br>
+• Berhampiran <strong>Amerald Resort Hotel</strong>.<br>
+⏱️ <strong>Anggaran Masa Perjalanan (Driving):</strong><br>
+• Dari <strong>Desaru Coast / Hard Rock Hotel</strong>: ±25 - 30 minit.<br>
+• Akses mudah & selamat untuk semua jenis kenderaan (Sedan & SUV).
 </div>
 </div>
 <div>
-<a class="btn" href="https://www.google.com/maps/search/?api=1&query=Fun+Kin+Campsite+Pantai+Rhu+Punggai+Johor" target="_blank" rel="noopener">Buka Google Maps (Navigasi GPS)</a>
+<a class="btn" href="https://www.google.com/maps/search/?api=1&query=Fun+Kin+Campsite+Pantai+Rhu+Punggai+Johor" target="_blank" rel="noopener">Buka Google Maps (GPS)</a>
 </div>
 </div>
 <div class="map-ui-visual">
@@ -131,15 +137,28 @@ footer{background:#062c3d;color:#cde4ea;padding:36px 0;text-align:center;font-si
 <div class="pin-icon">📍</div>
 <strong>Fun Kin Campsite</strong>
 <span>Pantai Rhu · Punggai, Pengerang</span>
-<div style="margin-top:12px; font-size:0.8rem; color:#14748b; font-weight:bold;">● 24 Jam Buka</div>
+<div style="margin-top:12px; font-size:0.8rem; color:#14748b; font-weight:bold;">● Buka 24 Jam</div>
 </div>
 </div>
 </div>
 </div>
 </section>
 
-<section class="contact" id="contact"><div class="wrap"><div class="eyebrow">Let's plan your getaway</div><h2>Ready for a seaside escape?</h2><p>Contact Leen to ask about availability, rental details and bookings.</p><div class="hours-note">🕒 Campsite: 24 Jam &nbsp;|&nbsp; WhatsApp Enquiry: 7:00 AM – 8:00 PM</div><div style="margin-top:24px"><a class="btn" href="https://wa.me/60167191887?text=Hi%2C%20saya%20berminat%20untuk%20bertanya%20mengenai%20Fun%20Kin%20Campsite" target="_blank" rel="noopener">Chat with us on WhatsApp</a></div></div></section>
+<!-- Hubungi Kami Section -->
+<section class="contact" id="contact">
+<div class="wrap">
+<div class="eyebrow">Hubungi Kami</div>
+<h2>Ready for a seaside escape?</h2>
+<p>Sila hubungi wakil kami di bawah untuk bertanya mengenai kekosongan, sewaan, dan tempahan.</p>
+<div class="hours-note">🕒 Campsite: 24 Jam &nbsp;|&nbsp; WhatsApp Enquiry: 7:00 AM – 8:00 PM</div>
+<div class="contact-buttons-group">
+<a class="btn btn-wa-contact" href="https://wa.me/60167191887?text=Hi%2C%20saya%20berminat%20untuk%20bertanya%20mengenai%20Fun%20Kin%20Campsite" target="_blank" rel="noopener">💬 WhatsApp Admin</a>
+<a class="btn btn-wa-contact" href="https://wa.me/60173512392?text=Hi%2C%20saya%20berminat%20untuk%20bertanya%20mengenai%20Fun%20Kin%20Campsite" target="_blank" rel="noopener">💬 WhatsApp Leen (+60 17-351 2392)</a>
+</div>
+</div>
+</section>
 </main>
+
 <footer><div class="wrap">
 <div class="social-links" title="Social media channels coming soon">
   <a class="social-btn" href="#" onclick="return false;" aria-label="Instagram">IG</a>
