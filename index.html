@@ -19,12 +19,26 @@ section{padding:76px 0}.section-head{text-align:center;max-width:700px;margin:0 
 .facilities{background:var(--seafoam)}.facility-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.facility{background:#ffffff;border:1px solid #cde4ea;border-radius:18px;padding:22px 16px;text-align:center}.facility .ico{font-size:2rem}.facility h3{font-size:1rem;color:var(--ocean);margin:9px 0 0}
 .rentals-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}.rental{background:white;border:1px solid #d5e8ed;border-radius:22px;overflow:hidden;box-shadow:0 12px 30px #0b4f6c12}.poster{width:100%;aspect-ratio:16/10;background:var(--seafoam);overflow:hidden}.poster img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;cursor:zoom-in;transition:transform .25s ease}.poster img:hover{transform:scale(1.03)}.rental-body{padding:22px 24px}.rental-body h3{margin:0;color:var(--ocean);font-size:1.35rem}.price{font-size:1.8rem;font-weight:900;color:#0e6b82;margin:5px 0}.rental-body p{color:var(--muted);margin:0}
 .promotions{background:#fff}.promo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}.promo-grid img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:20px;box-shadow:0 10px 26px #0b4f6c14;display:block;cursor:zoom-in;transition:transform .25s ease}.promo-grid img:hover{transform:scale(1.02)}
-.gallery{background:var(--seafoam)}.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.gallery-item{aspect-ratio:3/4;border-radius:18px;overflow:hidden;background:#dff0f4;border:1px solid #cde4ea;display:grid;place-items:center;text-align:center;color:var(--ocean);padding:16px;position:relative}.gallery-item img{width:100%;height:100%;object-fit:cover;object-position:center 70%;display:block;cursor:zoom-in;transition:transform .25s ease}.gallery-item img:hover{transform:scale(1.03)}.gallery-placeholder{border:2px dashed #9cc7d2;background:#f7fbfc}.gallery-placeholder span{font-size:2rem;display:block;margin-bottom:6px}.gallery-placeholder strong{display:block;margin-bottom:4px}.gallery-placeholder small{color:var(--muted);font-size:.82rem;display:block}
+.gallery{background:var(--seafoam)}.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.gallery-item{aspect-ratio:3/4;border-radius:18px;overflow:hidden;background:#dff0f4;border:1px solid #cde4ea;display:grid;place-items:center;text-align:center;color:var(--ocean);padding:16px;position:relative}.gallery-item img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;cursor:zoom-in;transition:transform .25s ease}.gallery-item img:hover{transform:scale(1.03)}
 .faq-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:960px;margin:0 auto}
 .faq-card{background:white;border:1px solid #d5e8ed;border-radius:16px;padding:24px;box-shadow:0 6px 20px rgba(11,79,108,0.06)}
 .faq-card h3{color:var(--ocean);font-size:1.1rem;margin-top:0;margin-bottom:10px}
 .faq-card p{color:var(--muted);margin:0;font-size:.95rem}
-.location{background:var(--ocean);color:white}.location .section-head .eyebrow{color:#7ee0ec}.location .section-head h2{color:white}.location .section-head p{color:#d3ebf0}.location-card{background:#f7fbfc;color:var(--ink);border-radius:22px;padding:26px;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}.location-card h3{color:var(--ocean)}.location-card p{color:var(--muted)}.map-placeholder{background:#dff0f4;min-height:210px;border-radius:16px;display:grid;place-items:center;text-align:center;padding:20px;color:#0b4f6c}
+
+/* Google Maps Interface Mockup Styling */
+.location{background:var(--ocean);color:white}.location .section-head .eyebrow{color:#7ee0ec}.location .section-head h2{color:white}.location .section-head p{color:#d3ebf0}
+.map-ui-container{background:#f7fbfc;color:var(--ink);border-radius:22px;overflow:hidden;box-shadow:0 16px 40px rgba(0,0,0,0.18);display:grid;grid-template-columns:1.1fr .9fr}
+.map-ui-info{padding:32px;display:flex;flex-direction:column;justify-content:space-between}
+.map-ui-info h3{color:var(--ocean);margin-top:0;font-size:1.5rem}
+.map-ui-info p{color:var(--muted);margin-bottom:16px}
+.landmarks-list{background:#eaf6f8;border-left:4px solid var(--ocean);padding:14px 18px;border-radius:0 12px 12px 0;margin:16px 0;font-size:.92rem}
+.landmarks-list strong{display:block;color:var(--ocean);margin-bottom:4px}
+.map-ui-visual{background:linear-gradient(135deg,#e1f3f8 0%,#c5e5ed 100%);min-height:280px;position:relative;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;border-left:1px solid #d5e8ed}
+.map-pin-box{background:white;padding:20px 24px;border-radius:16px;box-shadow:0 10px 30px rgba(11,79,108,0.15);max-width:280px;border:1px solid #cde4ea}
+.map-pin-box .pin-icon{font-size:2.2rem;margin-bottom:6px}
+.map-pin-box strong{color:var(--ocean);display:block;font-size:1.05rem}
+.map-pin-box span{color:var(--muted);font-size:.85rem;display:block;margin-top:4px}
+
 .contact{text-align:center;background:var(--cream)}.contact .eyebrow{color:#14748b}.contact h2{font-size:clamp(2rem,4vw,3rem);color:var(--ocean);margin:0 0 10px}.contact p{color:var(--muted)}
 .hours-note{display:inline-block;background:#eaf6f8;border:1px solid #cde4ea;padding:10px 20px;border-radius:999px;color:var(--ocean);font-weight:700;font-size:.9rem;margin-top:16px}
 footer{background:#062c3d;color:#cde4ea;padding:36px 0;text-align:center;font-size:.9rem}
@@ -49,13 +63,14 @@ footer{background:#062c3d;color:#cde4ea;padding:36px 0;text-align:center;font-si
   .hero{padding:78px 0;text-align:center}
   .hero-inner{margin:0 auto}
   .hero-actions{justify-content:center}
-  .intro-grid,.location-card{grid-template-columns:1fr;text-align:center}
+  .intro-grid,.map-ui-container{grid-template-columns:1fr;text-align:center}
   .intro-copy{display:flex;flex-direction:column;align-items:center}
   .facility-grid{grid-template-columns:repeat(2,1fr)}
   .rentals-grid,.promo-grid{grid-template-columns:1fr}
   .gallery-grid{grid-template-columns:repeat(2,1fr);gap:12px}
   .faq-grid{grid-template-columns:1fr}
   .rental{text-align:center}
+  .map-ui-info{align-items:center}
   section{padding:58px 0}
 }
 </style>
@@ -75,10 +90,8 @@ footer{background:#062c3d;color:#cde4ea;padding:36px 0;text-align:center;font-si
 <section class="gallery" id="gallery"><div class="wrap"><div class="section-head"><div class="eyebrow">Life by the beach</div><h2>Campsite gallery</h2><p>Tap any photo to view full screen.</p></div><div class="gallery-grid">
 <div class="gallery-item" style="padding:0"><img class="zoomable" src="Buai.jpeg" alt="Beach swing at Fun Kin Campsite"></div>
 <div class="gallery-item" style="padding:0"><img class="zoomable" src="Pondok.jpeg" alt="Seaside pangkin shelter at Fun Kin Campsite"></div>
-<div class="gallery-item gallery-placeholder"><div><span>🏖️</span><strong>Photo Slot 3</strong><small>Upload & replace with photo-3.jpeg</small></div></div>
-<div class="gallery-item gallery-placeholder"><div><span>🔥</span><strong>Photo Slot 4</strong><small>Upload & replace with photo-4.jpeg</small></div></div>
-<div class="gallery-item gallery-placeholder"><div><span>⛺</span><strong>Photo Slot 5</strong><small>Upload & replace with photo-5.jpeg</small></div></div>
-<div class="gallery-item gallery-placeholder"><div><span>🌅</span><strong>Photo Slot 6</strong><small>Upload & replace with photo-6.jpeg</small></div></div>
+<div class="gallery-item" style="padding:0"><img class="zoomable" src="Dome Rental2.jpeg" alt="Dome tent rental at Fun Kin Campsite"></div>
+<div class="gallery-item" style="padding:0"><img class="zoomable" src="Pangkin Rental.jpeg" alt="Pangkin rental at Fun Kin Campsite"></div>
 </div></div></section>
 
 <!-- FAQ Section Module -->
@@ -89,7 +102,42 @@ footer{background:#062c3d;color:#cde4ea;padding:36px 0;text-align:center;font-si
 <div class="faq-card"><h3>4. Di manakah lokasi tepat campsite ini?</h3><p>Kami terletak di Pantai Rhu, Punggai, Tanjung Sepang, Pengerang, Johor. Anda boleh klik pada pautan Google Maps di bawah untuk panduan arah.</p></div>
 </div></div></section>
 
-<section class="location" id="location"><div class="wrap"><div class="section-head"><div class="eyebrow">Find us</div><h2>Visit Fun Kin Campsite</h2><p>Come and enjoy the coastal atmosphere at Punggai, Johor.</p></div><div class="location-card"><div><h3>Fun Kin Campsite</h3><p>Pantai Rhu, Punggai, Tanjung Sepang, Pengerang, Johor, Malaysia.</p><p>Please use the map search and confirm the exact pin with the campsite before travelling.</p><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Fun+Kin+Campsite+Pantai+Rhu+Punggai+Johor" target="_blank" rel="noopener">Open Google Maps</a></div><div class="map-placeholder"><div><div style="font-size:2.5rem">📍</div><strong>Pantai Rhu · Punggai</strong><br><span>Open Google Maps for directions</span></div></div></div></div></section>
+<!-- Google Maps Interface Section -->
+<section class="location" id="location">
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow">Find us</div>
+<h2>Peta & Panduan Lokasi</h2>
+<p>Panduan laluan mudah dan mercu tanda berhampiran untuk ke Fun Kin Campsite.</p>
+</div>
+<div class="map-ui-container">
+<div class="map-ui-info">
+<div>
+<h3>Fun Kin Campsite</h3>
+<p><strong>Alamat:</strong> Pantai Rhu, Punggai, Tanjung Sepang, Pengerang, Johor, Malaysia.</p>
+<div class="landmarks-list">
+<strong>📍 Mercu Tanda & Laluan Berhampiran:</strong>
+• Dari Lebuhraya Senai-Desaru / Bandar Penawar, susur ke laluan utama Punggai / Tanjung Sepang.<br>
+• Berdekatan kawasan perkampungan pesisir pantai Pantai Rhu.<br>
+• Mudah diakses oleh kenderaan biasa (Sedan & SUV) hingga ke tapak.
+</div>
+</div>
+<div>
+<a class="btn" href="https://www.google.com/maps/search/?api=1&query=Fun+Kin+Campsite+Pantai+Rhu+Punggai+Johor" target="_blank" rel="noopener">Buka Google Maps (Navigasi GPS)</a>
+</div>
+</div>
+<div class="map-ui-visual">
+<div class="map-pin-box">
+<div class="pin-icon">📍</div>
+<strong>Fun Kin Campsite</strong>
+<span>Pantai Rhu · Punggai, Pengerang</span>
+<div style="margin-top:12px; font-size:0.8rem; color:#14748b; font-weight:bold;">● 24 Jam Buka</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
 <section class="contact" id="contact"><div class="wrap"><div class="eyebrow">Let's plan your getaway</div><h2>Ready for a seaside escape?</h2><p>Contact Leen to ask about availability, rental details and bookings.</p><div class="hours-note">🕒 Campsite: 24 Jam &nbsp;|&nbsp; WhatsApp Enquiry: 7:00 AM – 8:00 PM</div><div style="margin-top:24px"><a class="btn" href="https://wa.me/60167191887?text=Hi%2C%20saya%20berminat%20untuk%20bertanya%20mengenai%20Fun%20Kin%20Campsite" target="_blank" rel="noopener">Chat with us on WhatsApp</a></div></div></section>
 </main>
 <footer><div class="wrap">
