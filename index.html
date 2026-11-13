@@ -206,7 +206,7 @@ footer{background:#062c3d;color:#cde4ea;padding:36px 0;text-align:center;font-si
   </div>
 </section>
 
-<!-- Interactive Facilities Section -->
+<!-- Interactive Facilities Section (Re-arranged as requested) -->
 <section class="facilities" id="facilities">
   <div class="wrap">
     <div class="section-head">
@@ -215,44 +215,46 @@ footer{background:#062c3d;color:#cde4ea;padding:36px 0;text-align:center;font-si
       <p data-ms="Tekan mana-mana kemudahan di bawah untuk melihat maklumat terperinci." data-en="Tap any facility below to view detailed information.">Tekan mana-mana kemudahan di bawah untuk melihat maklumat terperinci.</p>
     </div>
     <div class="facility-grid">
-      <div class="facility" onclick="openFacilityModal('🛖', 'Challet', 'Challet', '1 unit challet disediakan untuk disewakan mengikut kadar harian.', '1 chalet unit available for rent on a daily rate basis.')">
+      <!-- 1. Challet -->
+      <div class="facility" onclick="openFacilityModal('🛖', 'Challet', 'Chalet', '1 unit challet disediakan untuk disewakan mengikut kadar harian.', '1 chalet unit available for rent on a daily rate basis.')">
         <div class="ico">🛖</div>
         <h3 data-ms="Challet" data-en="Chalet">Challet</h3>
         <div class="facility-hint" data-ms="Tekan untuk info" data-en="Tap for info">Tekan untuk info</div>
       </div>
-      <div class="facility" onclick="openFacilityModal('🚻', 'Tandas & Bilik Mandi', 'Toilets & Bathrooms', '2 tandas disediakan.', '2 toilets provided.')">
-        <div class="ico">🚻</div>
-        <h3 data-ms="Tandas & Bilik Mandi" data-en="Toilets & bathrooms">Tandas & Bilik Mandi</h3>
+      <!-- 2. Pangkin -->
+      <div class="facility" onclick="openFacilityModal('🪵', 'Pangkin', 'Pangkin', '3 buah unit pangkin disediakan lengkap dengan kemudahan dan ruang santai.', '3 pangkin units provided complete with facilities and resting space.')">
+        <div class="ico">🪵</div>
+        <h3 data-ms="Pangkin" data-en="Pangkin">Pangkin</h3>
         <div class="facility-hint" data-ms="Tekan untuk info" data-en="Tap for info">Tekan untuk info</div>
       </div>
-      <div class="facility" onclick="openFacilityModal('🚿', 'Kemudahan Pancuran', 'Shower Facilities', '2 bilik mandian disediakan.', '2 bathroom showers provided.')">
-        <div class="ico">🚿</div>
-        <h3 data-ms="Kemudahan Pancuran" data-en="Shower facilities">Kemudahan Pancuran</h3>
+      <!-- 3. Tent -->
+      <div class="facility" onclick="openFacilityModal('⛺', 'Tent', 'Tent', 'Tapak atau kemudahan khemah disediakan untuk pengalaman perkhemahan selesa.', 'Tent pitch or facilities available for a comfortable camping experience.')">
+        <div class="ico">⛺</div>
+        <h3 data-ms="Tent" data-en="Tent">Tent</h3>
         <div class="facility-hint" data-ms="Tekan untuk info" data-en="Tap for info">Tekan untuk info</div>
       </div>
-      <div class="facility" onclick="openFacilityModal('⚡', 'Bekalan Elektrik', 'Electricity', 'Power Socket disediakan untuk setiap pangkin.', 'Power socket provided for each pangkin platform.')">
-        <div class="ico">⚡</div>
-        <h3 data-ms="Bekalan Elektrik" data-en="Electricity">Bekalan Elektrik</h3>
-        <div class="facility-hint" data-ms="Tekan untuk info" data-en="Tap for info">Tekan untuk info</div>
-      </div>
-      <div class="facility" onclick="openFacilityModal('🔥', 'Kawasan BBQ', 'BBQ Area', 'Setiap Pangkin Mempunyai BBQ Pit tersendiri.', 'Each pangkin platform has its own dedicated BBQ pit.')">
+      <!-- 4. BBQ Area -->
+      <div class="facility" onclick="openFacilityModal('🔥', 'Kawasan BBQ', 'BBQ Area', 'Setiap Pangkin Mempunyai BBQ Pit tersendiri untuk aktiviti membakar.', 'Each pangkin platform has its own dedicated BBQ pit for grilling activities.')">
         <div class="ico">🔥</div>
         <h3 data-ms="Kawasan BBQ" data-en="BBQ area">Kawasan BBQ</h3>
         <div class="facility-hint" data-ms="Tekan untuk info" data-en="Tap for info">Tekan untuk info</div>
       </div>
+      <!-- 5. Toilet & Bathrooms (Combined with Shower Facilities) -->
+      <div class="facility" onclick="openFacilityModal('🚻', 'Tandas & Bilik Mandi', 'Toilets & Bathrooms', '2 tandas dan 2 bilik mandian (pancuran) disediakan dengan bersih dan selesa.', '2 toilets and 2 bathroom showers provided clean and comfortable.')">
+        <div class="ico">🚻</div>
+        <h3 data-ms="Tandas & Bilik Mandi" data-en="Toilets & bathrooms">Tandas & Bilik Mandi</h3>
+        <div class="facility-hint" data-ms="Tekan untuk info" data-en="Tap for info">Tekan untuk info</div>
+      </div>
+      <!-- 6. Electricity -->
+      <div class="facility" onclick="openFacilityModal('⚡', 'Bekalan Elektrik', 'Electricity', 'Power Socket disediakan untuk kemudahan mengecas dan bekalan kuasa.', 'Power socket provided for charging convenience and power supply.')">
+        <div class="ico">⚡</div>
+        <h3 data-ms="Bekalan Elektrik" data-en="Electricity">Bekalan Elektrik</h3>
+        <div class="facility-hint" data-ms="Tekan untuk info" data-en="Tap for info">Tekan untuk info</div>
+      </div>
+      <!-- 7. Parking -->
       <div class="facility" onclick="openFacilityModal('🅿️', 'Tempat Letak Kereta', 'Parking Area', 'Tapak parking kenderaan berdekatan tapak perkhemahan disediakan.', 'Vehicle parking space near the campsite is provided.')">
         <div class="ico">🅿️</div>
         <h3 data-ms="Tempat Letak Kereta" data-en="Parking">Tempat Letak Kereta</h3>
-        <div class="facility-hint" data-ms="Tekan untuk info" data-en="Tap for info">Tekan untuk info</div>
-      </div>
-      <div class="facility" onclick="openFacilityModal('⛺', 'Sewa Khemah', 'Tent Rental', 'Perkhidmatan sewa khemah disediakan.', 'Tent rental service is available.')">
-        <div class="ico">⛺</div>
-        <h3 data-ms="Sewa Khemah" data-en="Tent rental">Sewa Khemah</h3>
-        <div class="facility-hint" data-ms="Tekan untuk info" data-en="Tap for info">Tekan untuk info</div>
-      </div>
-      <div class="facility" onclick="openFacilityModal('🌊', 'Tapak Tepi Pantai', 'Seaside Camping', 'Camping berdekatan dengan pemandangan laut yang nyaman dan indah.', 'Camping close to comfortable and scenic sea views.')">
-        <div class="ico">🌊</div>
-        <h3 data-ms="Tapak Tepi Pantai" data-en="Seaside camping">Tapak Tepi Pantai</h3>
         <div class="facility-hint" data-ms="Tekan untuk info" data-en="Tap for info">Tekan untuk info</div>
       </div>
     </div>
