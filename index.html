@@ -106,8 +106,18 @@ footer{background:#062c3d;color:#cde4ea;padding:36px 0;text-align:center;font-si
 .social-links{display:flex;justify-content:center;gap:16px;margin-bottom:16px}
 .social-btn{background:rgba(255,255,255,0.08);color:#cde4ea;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;text-decoration:none;border:1px solid rgba(255,255,255,0.15);font-size:.9rem;cursor:not-allowed;opacity:0.7}
 .social-btn:hover{background:rgba(255,255,255,0.18);color:white}
-.float-wa{position:fixed;right:20px;bottom:20px;z-index:20;background:var(--whatsapp);box-shadow:0 8px 24px rgba(37,211,102,0.4)}
+
+/* Floating Action Buttons Wrapper (WhatsApp & Scroll-to-Top) */
+.float-actions{position:fixed;right:20px;bottom:20px;z-index:20;display:flex;flex-direction:column;gap:12px;align-items:center}
+.float-wa{background:var(--whatsapp);box-shadow:0 8px 24px rgba(37,211,102,0.4);width:52px;height:52px;border-radius:50%;display:grid;place-items:center;text-decoration:none;transition:transform .2s}
+.float-wa:hover{transform:scale(1.08)}
 .float-wa svg{width:28px;height:28px;fill:white}
+
+/* Scroll-to-Top Button Style */
+.float-top{background:#eaf6f8;color:var(--ocean);border:1px solid #cde4ea;box-shadow:0 6px 20px rgba(11,79,108,0.15);width:44px;height:44px;border-radius:50%;display:grid;place-items:center;text-decoration:none;cursor:pointer;transition:transform .2s,background .2s;opacity:0;visibility:hidden;transform:translateY(10px)}
+.float-top.show{opacity:1;visibility:visible;transform:translateY(0)}
+.float-top:hover{background:#d5e8ed;transform:translateY(-2px)}
+.float-top svg{width:22px;height:22px;fill:var(--ocean)}
 
 /* Full-screen Image Lightbox */
 .lightbox{position:fixed;inset:0;z-index:100;background:rgba(6,28,39,0.92);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:20px;cursor:zoom-out}
@@ -145,10 +155,10 @@ footer{background:#062c3d;color:#cde4ea;padding:36px 0;text-align:center;font-si
     <a class="brand" href="#home">FUN KIN CAMPSITE<span>PANTAI RHU · PUNGGAI</span></a>
     <div style="display:flex; align-items:center; gap:12px;">
       <div class="lang-toggle">
-        <button class="lang-btn active" id="btnMy" onclick="setLang('my')">MY</button>
-        <button class="lang-btn" id="btnEn" onclick="setLang('en')">EN</button>
+        <button class="lang-btn active" id="btnMy" type="button" onclick="setLang('my')">MY</button>
+        <button class="lang-btn" id="btnEn" type="button" onclick="setLang('en')">EN</button>
       </div>
-      <button class="menu" id="menuBtn" aria-label="Open navigation">☰</button>
+      <button class="menu" id="menuBtn" type="button" aria-label="Open navigation">☰</button>
     </div>
     <nav class="links" id="navLinks">
       <a href="#about" data-ms="Tentang" data-en="About">Tentang</a>
@@ -252,11 +262,11 @@ footer{background:#062c3d;color:#cde4ea;padding:36px 0;text-align:center;font-si
 <!-- Facility Info Pop-up Modal -->
 <div class="facility-modal" id="facilityModal" role="dialog" aria-modal="true">
   <div class="modal-content">
-    <button class="modal-close" onclick="closeFacilityModal()">&times;</button>
+    <button class="modal-close" type="button" onclick="closeFacilityModal()">&times;</button>
     <div class="modal-icon" id="modalIcon">🚻</div>
     <div class="modal-title" id="modalTitle">Tandas & Bilik Mandi</div>
     <p class="modal-desc" id="modalDesc">2 tandas disediakan</p>
-    <button class="btn" style="width:100%; border-radius:12px;" id="modalCloseBtn" onclick="closeFacilityModal()">Tutup</button>
+    <button class="btn" type="button" style="width:100%; border-radius:12px;" id="modalCloseBtn" onclick="closeFacilityModal()">Tutup</button>
   </div>
 </div>
 
@@ -389,40 +399,79 @@ footer{background:#062c3d;color:#cde4ea;padding:36px 0;text-align:center;font-si
   </div>
 </footer>
 
-<a class="btn float-wa" href="https://wa.me/60167191887?text=Hi%2C%20saya%20berminat%20untuk%20bertanya%20mengenai%20Fun%20Kin%20Campsite" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01C17.18 3.03 14.69 2 12.04 2zM12.04 20.1c-1.43 0-2.83-.38-4.06-1.09l-.29-.17-3.03.8.81-2.95-.19-.31c-.81-1.28-1.24-2.77-1.24-4.3 0-4.46 3.63-8.09 8.09-8.09 2.16 0 4.19.84 5.72 2.37 1.53 1.53 2.37 3.56 2.37 5.72 0 4.46-3.63 8.09-8.08 8.09zm4.43-6.04c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.93-1.19-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.31-.74-1.8-.2-.47-.4-.41-.54-.42l-.46-.01c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.34.98 2.5c.12.16 1.7 2.59 4.12 3.63.58.25 1.03.4 1.38.51.58.18 1.11.15 1.53.09.47-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg>
-</a>
+<!-- Floating Action Buttons (Scroll to Top & WhatsApp) -->
+<div class="float-actions">
+  <a class="float-top" id="scrollTopBtn" href="#home" aria-label="Scroll to top" title="Kembali ke atas">
+    <svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+  </a>
+  <a class="float-wa" href="https://wa.me/60167191887?text=Hi%2C%20saya%20berminat%20untuk%20bertanya%20mengenai%20Fun%20Kin%20Campsite" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" title="WhatsApp Kami">
+    <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01C17.18 3.03 14.69 2 12.04 2zM12.04 20.1c-1.43 0-2.83-.38-4.06-1.09l-.29-.17-3.03.8.81-2.95-.19-.31c-.81-1.28-1.24-2.77-1.24-4.3 0-4.46 3.63-8.09 8.09-8.09 2.16 0 4.19.84 5.72 2.37 1.53 1.53 2.37 3.56 2.37 5.72 0 4.46-3.63 8.09-8.08 8.09zm4.43-6.04c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.93-1.19-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.31-.74-1.8-.2-.47-.4-.41-.54-.42l-.46-.01c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.34.98 2.5c.12.16 1.7 2.59 4.12 3.63.58.25 1.03.4 1.38.51.58.18 1.11.15 1.53.09.47-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg>
+  </a>
+</div>
 
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
-  <button class="lightbox-close" id="lightboxClose" aria-label="Close preview">&times;</button>
+  <button class="lightbox-close" type="button" id="lightboxClose" aria-label="Close preview">&times;</button>
   <img id="lightboxImg" src="" alt="">
   <div class="lightbox-caption" id="lightboxCap"></div>
 </div>
 
 <script>
-document.getElementById('year').textContent=new Date().getFullYear();
-const menu=document.getElementById('menuBtn'),nav=document.getElementById('navLinks');
-menu.addEventListener('click',()=>{nav.classList.toggle('open');menu.setAttribute('aria-expanded',nav.classList.contains('open')?'true':'false')});
-nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const menu = document.getElementById('menuBtn');
+const nav = document.getElementById('navLinks');
+menu.addEventListener('click', () => {
+  nav.classList.toggle('open');
+  menu.setAttribute('aria-expanded', nav.classList.contains('open') ? 'true' : 'false');
+});
+nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+
+// Scroll-to-Top Button Logic
+const scrollTopBtn = document.getElementById('scrollTopBtn');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    scrollTopBtn.classList.add('show');
+  } else {
+    scrollTopBtn.classList.remove('show');
+  }
+});
 
 // Global current language tracker ('my' or 'en')
 let currentLang = 'my';
 
-// Fungsi Dwi-Bahasa (MY / EN)
+// Fungsi Dwi-Bahasa (MY / EN) yang dioptimumkan untuk Mobile & Touch Events
 function setLang(lang) {
   currentLang = lang;
   const elements = document.querySelectorAll('[data-ms]');
   elements.forEach(el => {
     if (lang === 'en') {
-      if(el.hasAttribute('data-en')) el.innerHTML = el.getAttribute('data-en');
+      if (el.hasAttribute('data-en')) el.innerHTML = el.getAttribute('data-en');
     } else {
-      if(el.hasAttribute('data-ms')) el.innerHTML = el.getAttribute('data-ms');
+      if (el.hasAttribute('data-ms')) el.innerHTML = el.getAttribute('data-ms');
     }
   });
-  document.getElementById('btnMy').classList.toggle('active', lang === 'my');
-  document.getElementById('btnEn').classList.toggle('active', lang === 'en');
+
+  const btnMy = document.getElementById('btnMy');
+  const btnEn = document.getElementById('btnEn');
+  if (btnMy && btnEn) {
+    btnMy.classList.toggle('active', lang === 'my');
+    btnEn.classList.toggle('active', lang === 'en');
+  }
   document.documentElement.lang = lang;
 }
+
+// Tambahan Event Listener khusus untuk Touch/Mobile supaya tindak balas butang bahasa lebih lancar
+document.addEventListener('DOMContentLoaded', () => {
+  const btnMy = document.getElementById('btnMy');
+  const btnEn = document.getElementById('btnEn');
+
+  if (btnMy) {
+    btnMy.addEventListener('touchend', (e) => { e.preventDefault(); setLang('my'); });
+  }
+  if (btnEn) {
+    btnEn.addEventListener('touchend', (e) => { e.preventDefault(); setLang('en'); });
+  }
+});
 
 // Fungsi Modal Pop-up untuk Kemudahan (Facilities) dengan Sokongan Dwi-Bahasa
 let activeModalData = null;
@@ -445,13 +494,6 @@ function closeFacilityModal() {
   document.getElementById('facilityModal').classList.remove('open');
 }
 
-// Kemaskini kandungan modal secara langsung jika bahasa ditukar semasa modal terbuka
-const originalSetLang = setLang;
-setLang = function(lang) {
-  originalSetLang(lang);
-  updateModalContent();
-};
-
 // Tutup modal jika tekan di luar kotak pop-up
 document.getElementById('facilityModal').addEventListener('click', e => {
   if (e.target.id === 'facilityModal') closeFacilityModal();
@@ -461,18 +503,23 @@ document.addEventListener('keydown', e => {
 });
 
 // Lightbox Gambar
-const lb=document.getElementById('lightbox'),lbImg=document.getElementById('lightboxImg'),lbCap=document.getElementById('lightboxCap'),lbClose=document.getElementById('lightboxClose');
-document.querySelectorAll('.zoomable').forEach(img=>{
-  img.addEventListener('click',()=>{
-    lbImg.src=img.src;
-    lbImg.alt=img.alt;
-    lbCap.textContent=img.alt;
+const lb = document.getElementById('lightbox');
+const lbImg = document.getElementById('lightboxImg');
+const lbCap = document.getElementById('lightboxCap');
+const lbClose = document.getElementById('lightboxClose');
+
+document.querySelectorAll('.zoomable').forEach(img => {
+  img.addEventListener('click', () => {
+    lbImg.src = img.src;
+    lbImg.alt = img.alt;
+    lbCap.textContent = img.alt;
     lb.classList.add('open');
   });
 });
-const closeLb=()=>{lb.classList.remove('open');lbImg.src='';};
-lbClose.addEventListener('click',closeLb);
-lb.addEventListener('click',e=>{if(e.target===lb)closeLb();});
+
+const closeLb = () => { lb.classList.remove('open'); lbImg.src = ''; };
+lbClose.addEventListener('click', closeLb);
+lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
 </script>
 </body>
 </html>
