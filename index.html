@@ -63,11 +63,11 @@ section{padding:76px 0}.section-head{text-align:center;max-width:700px;margin:0 
 
 /* Interactive Facilities Section */
 .facilities{background:var(--seafoam)}.facility-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.facility{background:#ffffff;border:1px solid #cde4ea;border-radius:18px;padding:22px 16px;text-align:center;cursor:pointer;transition:transform .2s,box-shadow .2s,border-color .2s;position:relative}
+.facility{background:#ffffff;border:1px solid #cde4ea;border-radius:18px;padding:20px 12px;text-align:center;cursor:pointer;transition:transform .2s,box-shadow .2s,border-color .2s;position:relative}
 .facility:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(11,79,108,0.12);border-color:var(--ocean)}
 .facility .ico{font-size:2rem}
-.facility h3{font-size:1rem;color:var(--ocean);margin:9px 0 0}
-.facility-hint{font-size:0.72rem;color:#14748b;margin-top:6px;font-weight:700;opacity:0.8}
+.facility h3{font-size:0.95rem;color:var(--ocean);margin:8px 0 0}
+.facility-hint{font-size:0.7rem;color:#14748b;margin-top:4px;font-weight:700;opacity:0.8}
 
 /* Pop-up Modal for Facility Info */
 .facility-modal{position:fixed;inset:0;z-index:100;background:rgba(6,28,39,0.6);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;padding:20px}
@@ -117,6 +117,7 @@ footer{background:#062c3d;color:#cde4ea;padding:36px 0;text-align:center;font-si
 .lightbox-close:hover{background:rgba(255,255,255,0.3)}
 .lightbox-caption{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);color:#eaf6f8;background:rgba(6,28,39,0.75);padding:6px 16px;border-radius:999px;font-size:.88rem;max-width:90vw;text-align:center}
 
+/* Responsive Fixes for Mobile View */
 @media(max-width:760px){
   .links{display:none;position:absolute;top:72px;left:0;right:0;background:var(--cream);padding:18px 5%;flex-direction:column;align-items:stretch;border-bottom:1px solid #d5e8ed}
   .links.open{display:flex}
@@ -127,11 +128,14 @@ footer{background:#062c3d;color:#cde4ea;padding:36px 0;text-align:center;font-si
   .hero-actions{justify-content:center}
   .intro-grid{grid-template-columns:1fr;text-align:center}
   .intro-copy{display:flex;flex-direction:column;align-items:center}
-  .facility-grid{grid-template-columns:repeat(2,1fr)}
-  .rentals-grid,.promo-grid{grid-template-columns:1fr}
-  .gallery-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .facility-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .rentals-grid,.promo-grid{grid-template-columns:1fr;gap:16px}
+  .gallery-grid{grid-template-columns:repeat(2,1fr);gap:10px}
   .rental{text-align:center}
   section{padding:58px 0}
+  .gps-buttons-group{flex-direction:column;align-items:stretch;padding:0 20px}
+  .contact-cards-group{flex-direction:column;align-items:stretch;padding:0 20px}
+  .wa-modern-card{justify-content:center}
 }
 </style>
 </head>
@@ -277,4 +281,198 @@ footer{background:#062c3d;color:#cde4ea;padding:36px 0;text-align:center;font-si
         <div class="rental-body">
           <h3 data-ms="Sewa Pangkin (3 Buah Unit)" data-en="Pangkin Rental (3 Units Available)">Sewa Pangkin (3 Buah Unit)</h3>
           <div class="price">RM100</div>
-          <p data-ms="Terdapat 3 buah pangkin untuk disewa, lengkap dengan Power Socket dan BBQ
+          <p data-ms="Terdapat 3 buah pangkin untuk disewa, lengkap dengan Power Socket dan BBQ Pit tersendiri. Sila sahkan kekosongan." data-en="3 pangkin platforms available for rent, complete with own power socket and BBQ pit. Please confirm availability.">Terdapat 3 buah pangkin untuk disewa, lengkap dengan Power Socket dan BBQ Pit tersendiri. Sila sahkan kekosongan.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="promotions" id="promotions">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" data-ms="Pakej istimewa" data-en="Special packages">Pakej istimewa</div>
+      <h2 data-ms="Promosi" data-en="Promotions">Promosi</h2>
+      <p data-ms="Tekan poster untuk melihat butiran penuh." data-en="Tap any poster to view full details.">Tekan poster untuk melihat butiran penuh.</p>
+    </div>
+    <div class="promo-grid">
+      <img class="zoomable" src="dome-poster.jpeg" alt="Dome tent rental promotion">
+      <img class="zoomable" src="pankin-poster.jpeg" alt="Pangkin rental promotion">
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" data-ms="Kehidupan di pantai" data-en="Life by the beach">Kehidupan di pantai</div>
+      <h2 data-ms="Galeri Campsite" data-en="Campsite gallery">Galeri Campsite</h2>
+      <p data-ms="Tekan mana-mana gambar untuk paparan skrin penuh." data-en="Tap any photo to view full screen.">Tekan mana-mana gambar untuk paparan skrin penuh.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item" style="padding:0"><img class="zoomable" src="Buai.jpeg" alt="Beach swing at Fun Kin Campsite"></div>
+      <div class="gallery-item" style="padding:0"><img class="zoomable" src="Pondok.jpeg" alt="Seaside pangkin shelter at Fun Kin Campsite"></div>
+      <div class="gallery-item" style="padding:0"><img class="zoomable" src="Dome Rental2.jpeg" alt="Dome tent rental at Fun Kin Campsite"></div>
+      <div class="gallery-item" style="padding:0"><img class="zoomable" src="Pangkin Rental.jpeg" alt="Pangkin rental at Fun Kin Campsite"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Simplified Location Section with Google Maps & Waze Buttons -->
+<section class="location" id="location">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" data-ms="Cari kami" data-en="Find us">Cari kami</div>
+      <h2 data-ms="Lokasi Campsite" data-en="Campsite Location">Lokasi Campsite</h2>
+      <p data-ms="Pilih aplikasi navigasi kegemaran anda untuk terus ke Fun Kin Campsite, Pantai Rhu, Punggai." data-en="Choose your preferred navigation app to head straight to Fun Kin Campsite, Pantai Rhu, Punggai.">Pilih aplikasi navigasi kegemaran anda untuk terus ke Fun Kin Campsite, Pantai Rhu, Punggai.</p>
+    </div>
+    <div class="gps-buttons-group">
+      <!-- Google Maps Button -->
+      <a class="gps-btn" href="https://www.google.com/maps/search/?api=1&query=Fun+Kin+Campsite+Pantai+Rhu+Punggai+Johor" target="_blank" rel="noopener">
+        <span class="gps-icon">🗺️</span>
+        <span>Google Maps</span>
+      </a>
+      
+      <!-- Waze Button -->
+      <a class="gps-btn" href="https://www.waze.com/ul?q=Fun%20Kin%20Campsite%20Pantai%20Rhu%20Punggai%20Johor" target="_blank" rel="noopener">
+        <span class="gps-icon">🚗</span>
+        <span>Waze</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Hubungi Kami Section dengan Tema Warna Hijau WhatsApp & Logo Rasmi -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="eyebrow" data-ms="Hubungi Kami" data-en="Contact Us">Hubungi Kami</div>
+    <h2 data-ms="Bersedia untuk percutian pantai?" data-en="Ready for a seaside escape?">Bersedia untuk percutian pantai?</h2>
+    <p data-ms="Sila hubungi wakil kami di bawah untuk bertanya mengenai kekosongan, sewaan, dan tempahan." data-en="Please contact our representatives below to inquire about availability, rentals, and bookings.">Sila hubungi wakil kami di bawah untuk bertanya mengenai kekosongan, sewaan, dan tempahan.</p>
+    
+    <div class="hours-note" data-ms="🕒 Campsite: 24 Jam &nbsp;|&nbsp; Pertanyaan WhatsApp: 7:00 AM – 7:00 PM" data-en="🕒 Campsite: 24 Hours &nbsp;|&nbsp; WhatsApp Enquiry: 7:00 AM – 7:00 PM">🕒 Campsite: 24 Jam &nbsp;|&nbsp; Pertanyaan WhatsApp: 7:00 AM – 7:00 PM</div>
+    
+    <div class="contact-cards-group">
+      <!-- Kad Leen (016-719 1887) -->
+      <a class="wa-modern-card" href="https://wa.me/60167191887?text=Hi%2C%20saya%20berminat%20untuk%20bertanya%20mengenai%20Fun%20Kin%20Campsite" target="_blank" rel="noopener" aria-label="WhatsApp Leen">
+        <div class="wa-icon-box">
+          <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01C17.18 3.03 14.69 2 12.04 2zM12.04 20.1c-1.43 0-2.83-.38-4.06-1.09l-.29-.17-3.03.8.81-2.95-.19-.31c-.81-1.28-1.24-2.77-1.24-4.3 0-4.46 3.63-8.09 8.09-8.09 2.16 0 4.19.84 5.72 2.37 1.53 1.53 2.37 3.56 2.37 5.72 0 4.46-3.63 8.09-8.08 8.09zm4.43-6.04c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.93-1.19-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.31-.74-1.8-.2-.47-.4-.41-.54-.42l-.46-.01c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.34.98 2.5c.12.16 1.7 2.59 4.12 3.63.58.25 1.03.4 1.38.51.58.18 1.11.15 1.53.09.47-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg>
+        </div>
+        <div class="wa-info">
+          <span class="wa-name">Leen</span>
+          <span class="wa-desc" data-ms="Utama / Tempahan" data-en="Primary / Booking">Utama / Tempahan</span>
+        </div>
+      </a>
+      
+      <!-- Kad Meor (017-351 2392) -->
+      <a class="wa-modern-card" href="https://wa.me/60173512392?text=Hi%2C%20saya%20berminat%20untuk%20bertanya%20mengenai%20Fun%20Kin%20Campsite" target="_blank" rel="noopener" aria-label="WhatsApp Meor">
+        <div class="wa-icon-box">
+          <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01C17.18 3.03 14.69 2 12.04 2zM12.04 20.1c-1.43 0-2.83-.38-4.06-1.09l-.29-.17-3.03.8.81-2.95-.19-.31c-.81-1.28-1.24-2.77-1.24-4.3 0-4.46 3.63-8.09 8.09-8.09 2.16 0 4.19.84 5.72 2.37 1.53 1.53 2.37 3.56 2.37 5.72 0 4.46-3.63 8.09-8.08 8.09zm4.43-6.04c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.93-1.19-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.31-.74-1.8-.2-.47-.4-.41-.54-.42l-.46-.01c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.34.98 2.5c.12.16 1.7 2.59 4.12 3.63.58.25 1.03.4 1.38.51.58.18 1.11.15 1.53.09.47-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg>
+        </div>
+        <div class="wa-info">
+          <span class="wa-name">Meor</span>
+          <span class="wa-desc" data-ms="Pertanyaan Am" data-en="General Enquiry">Pertanyaan Am</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="social-links" title="Social media channels coming soon">
+      <a class="social-btn" href="#" onclick="return false;" aria-label="Instagram">IG</a>
+      <a class="social-btn" href="#" onclick="return false;" aria-label="TikTok">TT</a>
+      <a class="social-btn" href="#" onclick="return false;" aria-label="Facebook">FB</a>
+    </div>
+    © <span id="year"></span> Fun Kin Campsite · Punggai, Johor. All rights reserved.
+  </div>
+</footer>
+
+<a class="btn float-wa" href="https://wa.me/60167191887?text=Hi%2C%20saya%20berminat%20untuk%20bertanya%20mengenai%20Fun%20Kin%20Campsite" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01C17.18 3.03 14.69 2 12.04 2zM12.04 20.1c-1.43 0-2.83-.38-4.06-1.09l-.29-.17-3.03.8.81-2.95-.19-.31c-.81-1.28-1.24-2.77-1.24-4.3 0-4.46 3.63-8.09 8.09-8.09 2.16 0 4.19.84 5.72 2.37 1.53 1.53 2.37 3.56 2.37 5.72 0 4.46-3.63 8.09-8.08 8.09zm4.43-6.04c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.93-1.19-.71-.63-1.19-1.41-1.33-1.65-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.31-.74-1.8-.2-.47-.4-.41-.54-.42l-.46-.01c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.34.98 2.5c.12.16 1.7 2.59 4.12 3.63.58.25 1.03.4 1.38.51.58.18 1.11.15 1.53.09.47-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z"/></svg>
+</a>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close preview">&times;</button>
+  <img id="lightboxImg" src="" alt="">
+  <div class="lightbox-caption" id="lightboxCap"></div>
+</div>
+
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const menu=document.getElementById('menuBtn'),nav=document.getElementById('navLinks');
+menu.addEventListener('click',()=>{nav.classList.toggle('open');menu.setAttribute('aria-expanded',nav.classList.contains('open')?'true':'false')});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+
+// Global current language tracker ('my' or 'en')
+let currentLang = 'my';
+
+// Fungsi Dwi-Bahasa (MY / EN)
+function setLang(lang) {
+  currentLang = lang;
+  const elements = document.querySelectorAll('[data-ms]');
+  elements.forEach(el => {
+    if (lang === 'en') {
+      if(el.hasAttribute('data-en')) el.innerHTML = el.getAttribute('data-en');
+    } else {
+      if(el.hasAttribute('data-ms')) el.innerHTML = el.getAttribute('data-ms');
+    }
+  });
+  document.getElementById('btnMy').classList.toggle('active', lang === 'my');
+  document.getElementById('btnEn').classList.toggle('active', lang === 'en');
+  document.documentElement.lang = lang;
+}
+
+// Fungsi Modal Pop-up untuk Kemudahan (Facilities) dengan Sokongan Dwi-Bahasa
+let activeModalData = null;
+
+function openFacilityModal(icon, titleMs, titleEn, descMs, descEn) {
+  activeModalData = { icon, titleMs, titleEn, descMs, descEn };
+  updateModalContent();
+  document.getElementById('facilityModal').classList.add('open');
+}
+
+function updateModalContent() {
+  if (!activeModalData) return;
+  document.getElementById('modalIcon').textContent = activeModalData.icon;
+  document.getElementById('modalTitle').textContent = (currentLang === 'en') ? activeModalData.titleEn : activeModalData.titleMs;
+  document.getElementById('modalDesc').textContent = (currentLang === 'en') ? activeModalData.descEn : activeModalData.descMs;
+  document.getElementById('modalCloseBtn').textContent = (currentLang === 'en') ? 'Close' : 'Tutup';
+}
+
+function closeFacilityModal() {
+  document.getElementById('facilityModal').classList.remove('open');
+}
+
+// Kemaskini kandungan modal secara langsung jika bahasa ditukar semasa modal terbuka
+const originalSetLang = setLang;
+setLang = function(lang) {
+  originalSetLang(lang);
+  updateModalContent();
+};
+
+// Tutup modal jika tekan di luar kotak pop-up
+document.getElementById('facilityModal').addEventListener('click', e => {
+  if (e.target.id === 'facilityModal') closeFacilityModal();
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeFacilityModal();
+});
+
+// Lightbox Gambar
+const lb=document.getElementById('lightbox'),lbImg=document.getElementById('lightboxImg'),lbCap=document.getElementById('lightboxCap'),lbClose=document.getElementById('lightboxClose');
+document.querySelectorAll('.zoomable').forEach(img=>{
+  img.addEventListener('click',()=>{
+    lbImg.src=img.src;
+    lbImg.alt=img.alt;
+    lbCap.textContent=img.alt;
+    lb.classList.add('open');
+  });
+});
+const closeLb=()=>{lb.classList.remove('open');lbImg.src='';};
+lbClose.addEventListener('click',closeLb);
+lb.addEventListener('click',e=>{if(e.target===lb)closeLb();});
+</script>
+</body>
+</html>
