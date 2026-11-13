@@ -20,7 +20,18 @@ section{padding:76px 0}.section-head{text-align:center;max-width:700px;margin:0 
 .rentals-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}.rental{background:white;border:1px solid #d5e8ed;border-radius:22px;overflow:hidden;box-shadow:0 12px 30px #0b4f6c12}.poster{width:100%;aspect-ratio:16/10;background:var(--seafoam);overflow:hidden}.poster img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;cursor:zoom-in;transition:transform .25s ease}.poster img:hover{transform:scale(1.03)}.rental-body{padding:22px 24px}.rental-body h3{margin:0;color:var(--ocean);font-size:1.35rem}.price{font-size:1.8rem;font-weight:900;color:#0e6b82;margin:5px 0}.rental-body p{color:var(--muted);margin:0}
 .promotions{background:#fff}.promo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}.promo-grid img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:20px;box-shadow:0 10px 26px #0b4f6c14;display:block;cursor:zoom-in;transition:transform .25s ease}.promo-grid img:hover{transform:scale(1.02)}
 .gallery{background:var(--seafoam)}.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.gallery-item{aspect-ratio:3/4;border-radius:18px;overflow:hidden;background:#dff0f4;border:1px solid #cde4ea;display:grid;place-items:center;text-align:center;color:var(--ocean);padding:16px;position:relative}.gallery-item img{width:100%;height:100%;object-fit:cover;object-position:center 70%;display:block;cursor:zoom-in;transition:transform .25s ease}.gallery-item img:hover{transform:scale(1.03)}.gallery-placeholder{border:2px dashed #9cc7d2;background:#f7fbfc}.gallery-placeholder span{font-size:2rem;display:block;margin-bottom:6px}.gallery-placeholder strong{display:block;margin-bottom:4px}.gallery-placeholder small{color:var(--muted);font-size:.82rem;display:block}
-.location{background:var(--ocean);color:white}.location .section-head .eyebrow{color:#7ee0ec}.location .section-head h2{color:white}.location .section-head p{color:#d3ebf0}.location-card{background:#f7fbfc;color:var(--ink);border-radius:22px;padding:26px;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}.location-card h3{color:var(--ocean)}.location-card p{color:var(--muted)}.map-placeholder{background:#dff0f4;min-height:210px;border-radius:16px;display:grid;place-items:center;text-align:center;padding:20px;color:#0b4f6c}.contact{text-align:center;background:var(--cream)}.contact .eyebrow{color:#14748b}.contact h2{font-size:clamp(2rem,4vw,3rem);color:var(--ocean);margin:0 0 10px}.contact p{color:var(--muted)}footer{background:#062c3d;color:#cde4ea;padding:28px 0;text-align:center;font-size:.9rem}.float-wa{position:fixed;right:20px;bottom:20px;z-index:20;background:#167447;box-shadow:0 8px 24px #0003}
+.faq-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:960px;margin:0 auto}
+.faq-card{background:white;border:1px solid #d5e8ed;border-radius:16px;padding:24px;box-shadow:0 6px 20px rgba(11,79,108,0.06)}
+.faq-card h3{color:var(--ocean);font-size:1.1rem;margin-top:0;margin-bottom:10px}
+.faq-card p{color:var(--muted);margin:0;font-size:.95rem}
+.location{background:var(--ocean);color:white}.location .section-head .eyebrow{color:#7ee0ec}.location .section-head h2{color:white}.location .section-head p{color:#d3ebf0}.location-card{background:#f7fbfc;color:var(--ink);border-radius:22px;padding:26px;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}.location-card h3{color:var(--ocean)}.location-card p{color:var(--muted)}.map-placeholder{background:#dff0f4;min-height:210px;border-radius:16px;display:grid;place-items:center;text-align:center;padding:20px;color:#0b4f6c}
+.contact{text-align:center;background:var(--cream)}.contact .eyebrow{color:#14748b}.contact h2{font-size:clamp(2rem,4vw,3rem);color:var(--ocean);margin:0 0 10px}.contact p{color:var(--muted)}
+.hours-note{display:inline-block;background:#eaf6f8;border:1px solid #cde4ea;padding:10px 20px;border-radius:999px;color:var(--ocean);font-weight:700;font-size:.9rem;margin-top:16px}
+footer{background:#062c3d;color:#cde4ea;padding:36px 0;text-align:center;font-size:.9rem}
+.social-links{display:flex;justify-content:center;gap:16px;margin-bottom:16px}
+.social-btn{background:rgba(255,255,255,0.08);color:#cde4ea;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;text-decoration:none;border:1px solid rgba(255,255,255,0.15);font-size:.9rem;cursor:not-allowed;opacity:0.7}
+.social-btn:hover{background:rgba(255,255,255,0.18);color:white}
+.float-wa{position:fixed;right:20px;bottom:20px;z-index:20;background:#167447;box-shadow:0 8px 24px #0003}
 
 /* Full-screen Image Lightbox */
 .lightbox{position:fixed;inset:0;z-index:100;background:rgba(6,28,39,0.92);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:20px;cursor:zoom-out}
@@ -43,13 +54,14 @@ section{padding:76px 0}.section-head{text-align:center;max-width:700px;margin:0 
   .facility-grid{grid-template-columns:repeat(2,1fr)}
   .rentals-grid,.promo-grid{grid-template-columns:1fr}
   .gallery-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .faq-grid{grid-template-columns:1fr}
   .rental{text-align:center}
   section{padding:58px 0}
 }
 </style>
 </head>
 <body>
-<header><div class="wrap nav"><a class="brand" href="#home">FUN KIN CAMPSITE<span>PANTAI RHU · PUNGGAI</span></a><button class="menu" id="menuBtn" aria-label="Open navigation">☰</button><nav class="links" id="navLinks"><a href="#about">About</a><a href="#facilities">Facilities</a><a href="#rental">Rental</a><a href="#promotions">Promotions</a><a href="#gallery">Gallery</a><a href="#location">Location</a><a href="#contact">Contact</a></nav><a class="btn" href="https://wa.me/60167191887?text=Hi%2C%20saya%20berminat%20untuk%20bertanya%20mengenai%20Fun%20Kin%20Campsite" target="_blank" rel="noopener">WhatsApp Us</a></div></header>
+<header><div class="wrap nav"><a class="brand" href="#home">FUN KIN CAMPSITE<span>PANTAI RHU · PUNGGAI</span></a><button class="menu" id="menuBtn" aria-label="Open navigation">☰</button><nav class="links" id="navLinks"><a href="#about">About</a><a href="#facilities">Facilities</a><a href="#rental">Rental</a><a href="#promotions">Promotions</a><a href="#gallery">Gallery</a><a href="#faq">FAQ</a><a href="#location">Location</a><a href="#contact">Contact</a></nav><a class="btn" href="https://wa.me/60167191887?text=Hi%2C%20saya%20berminat%20untuk%20bertanya%20mengenai%20Fun%20Kin%20Campsite" target="_blank" rel="noopener">WhatsApp Us</a></div></header>
 <main>
 <section class="hero" id="home"><div class="wrap hero-inner"><div class="eyebrow">Seaside camping · Punggai, Johor</div><h1>Slow down.<br>Get outdoors.</h1><p>Enjoy a relaxing seaside escape with family and friends at Fun Kin Campsite, Pantai Rhu, Punggai.</p><div class="hero-actions"><a class="btn gold" href="#rental">Explore rentals</a><a class="btn outline" href="https://wa.me/60167191887?text=Hi%2C%20saya%20berminat%20untuk%20bertanya%20mengenai%20Fun%20Kin%20Campsite" target="_blank" rel="noopener">Enquire on WhatsApp</a></div></div></section>
 <section id="about"><div class="wrap intro-grid"><div class="intro-photo"><div class="intro-badge"><div style="font-size:2.4rem">🌴 🌊 ⛺</div><strong>Your little seaside getaway</strong><p>Relax · Unwind · Make memories</p></div></div><div class="intro-copy"><div class="eyebrow">Welcome to Fun Kin</div><h2>Make time for the outdoors.</h2><p>Looking for a laid-back place to camp by the sea? Fun Kin Campsite offers a welcoming outdoor setting in the Punggai area, perfect for taking a break, enjoying the coastal atmosphere and spending quality time together.</p><p>Bring your loved ones, enjoy the fresh air and create simple memories by the beach.</p><a class="btn" href="#contact">Plan your visit</a></div></div></section>
@@ -68,9 +80,27 @@ section{padding:76px 0}.section-head{text-align:center;max-width:700px;margin:0 
 <div class="gallery-item gallery-placeholder"><div><span>⛺</span><strong>Photo Slot 5</strong><small>Upload & replace with photo-5.jpeg</small></div></div>
 <div class="gallery-item gallery-placeholder"><div><span>🌅</span><strong>Photo Slot 6</strong><small>Upload & replace with photo-6.jpeg</small></div></div>
 </div></div></section>
+
+<!-- FAQ Section Module -->
+<section id="faq" style="background:var(--cream)"><div class="wrap"><div class="section-head"><div class="eyebrow">Got questions?</div><h2>Frequently Asked Questions</h2><p>Everything you need to know about your stay at Fun Kin Campsite.</p></div><div class="faq-grid">
+<div class="faq-card"><h3>1. Bagaimana cara untuk membuat tempahan?</h3><p>Anda boleh terus menghubungi kami melalui butang WhatsApp yang disediakan di laman web ini untuk menyemak kekosongan tarikh.</p></div>
+<div class="faq-card"><h3>2. Apakah waktu operasi campsite?</h3><p>Tapak perkhemahan dibuka 24 jam. Walau bagaimanapun, khidmat pertanyaan melalui WhatsApp beroperasi dari jam 7:00 pagi hingga 8:00 malam.</p></div>
+<div class="faq-card"><h3>3. Adakah kemudahan asas disediakan?</h3><p>Ya, kemudahan seperti tandas, bilik mandi, bekalan elektrik, dan kawasan BBQ disediakan untuk keselesaan pengunjung.</p></div>
+<div class="faq-card"><h3>4. Di manakah lokasi tepat campsite ini?</h3><p>Kami terletak di Pantai Rhu, Punggai, Tanjung Sepang, Pengerang, Johor. Anda boleh klik pada pautan Google Maps di bawah untuk panduan arah.</p></div>
+</div></div></section>
+
 <section class="location" id="location"><div class="wrap"><div class="section-head"><div class="eyebrow">Find us</div><h2>Visit Fun Kin Campsite</h2><p>Come and enjoy the coastal atmosphere at Punggai, Johor.</p></div><div class="location-card"><div><h3>Fun Kin Campsite</h3><p>Pantai Rhu, Punggai, Tanjung Sepang, Pengerang, Johor, Malaysia.</p><p>Please use the map search and confirm the exact pin with the campsite before travelling.</p><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Fun+Kin+Campsite+Pantai+Rhu+Punggai+Johor" target="_blank" rel="noopener">Open Google Maps</a></div><div class="map-placeholder"><div><div style="font-size:2.5rem">📍</div><strong>Pantai Rhu · Punggai</strong><br><span>Open Google Maps for directions</span></div></div></div></div></section>
-<section class="contact" id="contact"><div class="wrap"><div class="eyebrow">Let's plan your getaway</div><h2>Ready for a seaside escape?</h2><p>Contact Leen to ask about availability, rental details and bookings.</p><a class="btn" href="https://wa.me/60167191887?text=Hi%2C%20saya%20berminat%20untuk%20bertanya%20mengenai%20Fun%20Kin%20Campsite" target="_blank" rel="noopener">Chat with us on WhatsApp</a></div></section>
-</main><footer><div class="wrap">© <span id="year"></span> Fun Kin Campsite · Punggai, Johor. All rights reserved.</div></footer><a class="btn float-wa" href="https://wa.me/60167191887?text=Hi%2C%20saya%20berminat%20untuk%20bertanya%20mengenai%20Fun%20Kin%20Campsite" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
+<section class="contact" id="contact"><div class="wrap"><div class="eyebrow">Let's plan your getaway</div><h2>Ready for a seaside escape?</h2><p>Contact Leen to ask about availability, rental details and bookings.</p><div class="hours-note">🕒 Campsite: 24 Jam &nbsp;|&nbsp; WhatsApp Enquiry: 7:00 AM – 8:00 PM</div><div style="margin-top:24px"><a class="btn" href="https://wa.me/60167191887?text=Hi%2C%20saya%20berminat%20untuk%20bertanya%20mengenai%20Fun%20Kin%20Campsite" target="_blank" rel="noopener">Chat with us on WhatsApp</a></div></div></section>
+</main>
+<footer><div class="wrap">
+<div class="social-links" title="Social media channels coming soon">
+  <a class="social-btn" href="#" onclick="return false;" aria-label="Instagram">IG</a>
+  <a class="social-btn" href="#" onclick="return false;" aria-label="TikTok">TT</a>
+  <a class="social-btn" href="#" onclick="return false;" aria-label="Facebook">FB</a>
+</div>
+© <span id="year"></span> Fun Kin Campsite · Punggai, Johor. All rights reserved.
+</div></footer>
+<a class="btn float-wa" href="https://wa.me/60167191887?text=Hi%2C%20saya%20berminat%20untuk%20bertanya%20mengenai%20Fun%20Kin%20Campsite" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
 
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
   <button class="lightbox-close" id="lightboxClose" aria-label="Close preview">&times;</button>
