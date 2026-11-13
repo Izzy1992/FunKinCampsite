@@ -60,7 +60,25 @@ section{padding:76px 0}.section-head{text-align:center;max-width:700px;margin:0 
 .intro-badge{background:rgba(247,251,252,0.28);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);padding:20px 26px;border-radius:20px;color:#062c3d;border:1px solid rgba(255,255,255,0.45);box-shadow:0 8px 24px rgba(7,55,77,0.08);text-shadow:0 1px 8px rgba(255,255,255,0.85)}
 .intro-badge strong{font-size:1.4rem;display:block;margin-top:4px}.intro-badge p{margin:6px 0 0;font-weight:700;color:#062c3d}
 .intro-copy .eyebrow{color:#14748b}.intro-copy h2{font-size:2.3rem;color:var(--ocean);line-height:1.15}.intro-copy p{color:var(--muted)}
-.facilities{background:var(--seafoam)}.facility-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.facility{background:#ffffff;border:1px solid #cde4ea;border-radius:18px;padding:22px 16px;text-align:center}.facility .ico{font-size:2rem}.facility h3{font-size:1rem;color:var(--ocean);margin:9px 0 0}
+
+/* Interactive Facility Cards with Clickable Pop-up Trigger */
+.facilities{background:var(--seafoam)}.facility-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.facility{background:#ffffff;border:1px solid #cde4ea;border-radius:18px;padding:22px 16px;text-align:center;cursor:pointer;transition:transform .2s,box-shadow .2s,border-color .2s;position:relative}
+.facility:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(11,79,108,0.12);border-color:var(--ocean)}
+.facility .ico{font-size:2rem}
+.facility h3{font-size:1rem;color:var(--ocean);margin:9px 0 0}
+.facility-hint{font-size:0.72rem;color:#14748b;margin-top:6px;font-weight:700;opacity:0.8}
+
+/* Pop-up Modal / Side Drawer for Facility Info */
+.facility-modal{position:fixed;inset:0;z-index:100;background:rgba(6,28,39,0.6);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;padding:20px}
+.facility-modal.open{display:flex}
+.modal-content{background:white;padding:30px;border-radius:20px;max-width:380px;width:100%;box-shadow:0 16px 40px rgba(0,0,0,0.2);text-align:center;position:relative;animation:modalPop .25s ease}
+@keyframes modalPop{from{transform:scale(0.9);opacity:0}to{transform:scale(1);opacity:1}}
+.modal-close{position:absolute;top:12px;right:16px;background:none;border:0;font-size:1.5rem;cursor:pointer;color:var(--muted)}
+.modal-icon{font-size:2.8rem;margin-bottom:10px}
+.modal-title{font-size:1.3rem;color:var(--ocean);font-weight:900;margin:0 0 8px}
+.modal-desc{color:var(--muted);font-size:0.95rem;margin:0 0 20px;line-height:1.5;background:var(--seafoam);padding:14px;border-radius:12px;border:1px solid #cde4ea}
+
 .rentals-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}.rental{background:white;border:1px solid #d5e8ed;border-radius:22px;overflow:hidden;box-shadow:0 12px 30px #0b4f6c12}.poster{width:100%;aspect-ratio:16/10;background:var(--seafoam);overflow:hidden}.poster img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;cursor:zoom-in;transition:transform .25s ease}.poster img:hover{transform:scale(1.03)}.rental-body{padding:22px 24px}.rental-body h3{margin:0;color:var(--ocean);font-size:1.35rem}.price{font-size:1.8rem;font-weight:900;color:#0e6b82;margin:5px 0}.rental-body p{color:var(--muted);margin:0}
 .promotions{background:#fff}.promo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}.promo-grid img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:20px;box-shadow:0 10px 26px #0b4f6c14;display:block;cursor:zoom-in;transition:transform .25s ease}.promo-grid img:hover{transform:scale(1.02)}
 .gallery{background:var(--seafoam)}.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.gallery-item{aspect-ratio:3/4;border-radius:18px;overflow:hidden;background:#dff0f4;border:1px solid #cde4ea;display:grid;place-items:center;text-align:center;color:var(--ocean);padding:16px;position:relative}.gallery-item img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;cursor:zoom-in;transition:transform .25s ease}.gallery-item img:hover{transform:scale(1.03)}
@@ -174,24 +192,64 @@ footer{background:#062c3d;color:#cde4ea;padding:36px 0;text-align:center;font-si
   </div>
 </section>
 
+<!-- Interactive Facilities Section with Click Pop-up Trigger -->
 <section class="facilities" id="facilities">
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow" data-ms="Kemudahan kami" data-en="What you'll find">Kemudahan kami</div>
       <h2 data-ms="Kemudahan Campsite" data-en="Campsite facilities">Kemudahan Campsite</h2>
-      <p data-ms="Keperluan asas untuk memastikan perkhemahan anda lebih selesa." data-en="Practical essentials to make your camping stay more comfortable.">Keperluan asas untuk memastikan perkhemahan anda lebih selesa.</p>
+      <p data-ms="Tekan mana-mana kemudahan di bawah untuk melihat maklumat terperinci." data-en="Tap any facility below to view detailed information.">Tekan mana-mana kemudahan di bawah untuk melihat maklumat terperinci.</p>
     </div>
     <div class="facility-grid">
-      <div class="facility"><div class="ico">🚻</div><h3 data-ms="Tandas & Bilik Mandi" data-en="Toilets & bathrooms">Tandas & Bilik Mandi</h3></div>
-      <div class="facility"><div class="ico">🚿</div><h3 data-ms="Kemudahan Pancuran" data-en="Shower facilities">Kemudahan Pancuran</h3></div>
-      <div class="facility"><div class="ico">⚡</div><h3 data-ms="Bekalan Elektrik" data-en="Electricity">Bekalan Elektrik</h3></div>
-      <div class="facility"><div class="ico">🔥</div><h3 data-ms="Kawasan BBQ" data-en="BBQ area">Kawasan BBQ</h3></div>
-      <div class="facility"><div class="ico">🅿️</div><h3 data-ms="Tempat Letak Kereta" data-en="Parking">Tempat Letak Kereta</h3></div>
-      <div class="facility"><div class="ico">⛺</div><h3 data-ms="Sewa Khemah" data-en="Tent rental">Sewa Khemah</h3></div>
-      <div class="facility"><div class="ico">🌊</div><h3 data-ms="Tapak Tepi Pantai" data-en="Seaside camping">Tapak Tepi Pantai</h3></div>
+      <div class="facility" onclick="openFacilityModal('🚻', 'Tandas & Bilik Mandi', 'Kemudahan: 2 Bilik mandi, 2 tandas bersih yang selesa untuk kegunaan pengunjung.')">
+        <div class="ico">🚻</div>
+        <h3 data-ms="Tandas & Bilik Mandi" data-en="Toilets & bathrooms">Tandas & Bilik Mandi</h3>
+        <div class="facility-hint" data-ms="Tekan untuk info" data-en="Tap for info">Tekan untuk info</div>
+      </div>
+      <div class="facility" onclick="openFacilityModal('🚿', 'Kemudahan Pancuran', 'Kemudahan: Paip pancuran air terbuka (*outdoor shower*) disediakan untuk bersihkan diri selepas berendam di pantai.')">
+        <div class="ico">🚿</div>
+        <h3 data-ms="Kemudahan Pancuran" data-en="Shower facilities">Kemudahan Pancuran</h3>
+        <div class="facility-hint" data-ms="Tekan untuk info" data-en="Tap for info">Tekan untuk info</div>
+      </div>
+      <div class="facility" onclick="openFacilityModal('⚡', 'Bekalan Elektrik', 'Kemudahan: Titik sambungan bekalan elektrik disediakan untuk kemudahan mengecas gajet dan keperluan asas pencahayaan.')">
+        <div class="ico">⚡</div>
+        <h3 data-ms="Bekalan Elektrik" data-en="Electricity">Bekalan Elektrik</h3>
+        <div class="facility-hint" data-ms="Tekan untuk info" data-en="Tap for info">Tekan untuk info</div>
+      </div>
+      <div class="facility" onclick="openFacilityModal('🔥', 'Kawasan BBQ', 'Kemudahan: Ruang khusus untuk aktiviti barbeku bersama keluarga dan rakan-rakan di tepi pantai.')">
+        <div class="ico">🔥</div>
+        <h3 data-ms="Kawasan BBQ" data-en="BBQ area">Kawasan BBQ</h3>
+        <div class="facility-hint" data-ms="Tekan untuk info" data-en="Tap for info">Tekan untuk info</div>
+      </div>
+      <div class="facility" onclick="openFacilityModal('🅿️', 'Tempat Letak Kereta', 'Kemudahan: Kawasan parkir kenderaan yang luas dan selamat berdekatan tapak perkhemahan (muat untuk Sedan & SUV).')">
+        <div class="ico">🅿️</div>
+        <h3 data-ms="Tempat Letak Kereta" data-en="Parking">Tempat Letak Kereta</h3>
+        <div class="facility-hint" data-ms="Tekan untuk info" data-en="Tap for info">Tekan untuk info</div>
+      </div>
+      <div class="facility" onclick="openFacilityModal('⛺', 'Sewa Khemah', 'Kemudahan: Menyediakan sewaan Dome Tent lengkap (RM100) untuk keselesaan bermalam di tepi pantai.')">
+        <div class="ico">⛺</div>
+        <h3 data-ms="Sewa Khemah" data-en="Tent rental">Sewa Khemah</h3>
+        <div class="facility-hint" data-ms="Tekan untuk info" data-en="Tap for info">Tekan untuk info</div>
+      </div>
+      <div class="facility" onclick="openFacilityModal('🌊', 'Tapak Tepi Pantai', 'Kemudahan: Lokasi tapak perkhemahan langsung menghadap pemandangan laut Pantai Rhu yang tenang dan berangin.')">
+        <div class="ico">🌊</div>
+        <h3 data-ms="Tapak Tepi Pantai" data-en="Seaside camping">Tapak Tepi Pantai</h3>
+        <div class="facility-hint" data-ms="Tekan untuk info" data-en="Tap for info">Tekan untuk info</div>
+      </div>
     </div>
   </div>
 </section>
+
+<!-- Facility Info Pop-up Modal -->
+<div class="facility-modal" id="facilityModal" role="dialog" aria-modal="true">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeFacilityModal()">&times;</button>
+    <div class="modal-icon" id="modalIcon">🚻</div>
+    <div class="modal-title" id="modalTitle">Tandas & Bilik Mandi</div>
+    <p class="modal-desc" id="modalDesc">Kemudahan: 2 Bilik mandi, 2 tandas</p>
+    <button class="btn" style="width:100%; border-radius:12px;" onclick="closeFacilityModal()">Tutup</button>
+  </div>
+</div>
 
 <section id="rental">
   <div class="wrap">
@@ -353,8 +411,28 @@ function setLang(lang) {
   document.documentElement.lang = lang;
 }
 
+// Fungsi Modal Pop-up untuk Kemudahan (Facilities)
+function openFacilityModal(icon, title, desc) {
+  document.getElementById('modalIcon').textContent = icon;
+  document.getElementById('modalTitle').textContent = title;
+  document.getElementById('modalDesc').textContent = desc;
+  document.getElementById('facilityModal').classList.add('open');
+}
+function closeFacilityModal() {
+  document.getElementById('facilityModal').classList.remove('open');
+}
+
+// Tutup modal jika tekan di luar kotak pop-up
+document.getElementById('facilityModal').addEventListener('click', e => {
+  if (e.target.id === 'facilityModal') closeFacilityModal();
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeFacilityModal();
+});
+
 // Lightbox Gambar
 const lb=document.getElementById('lightbox'),lbImg=document.getElementById('lightboxImg'),lbCap=document.getElementById('lightboxCap'),lbClose=document.getElementById('lightboxClose');
+document.querySelectorAll('.zoomable').forEaich?.(img=>{}); // safe check
 document.querySelectorAll('.zoomable').forEach(img=>{
   img.addEventListener('click',()=>{
     lbImg.src=img.src;
@@ -366,7 +444,6 @@ document.querySelectorAll('.zoomable').forEach(img=>{
 const closeLb=()=>{lb.classList.remove('open');lbImg.src='';};
 lbClose.addEventListener('click',closeLb);
 lb.addEventListener('click',e=>{if(e.target===lb)closeLb();});
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLb();});
 </script>
 </body>
 </html>
